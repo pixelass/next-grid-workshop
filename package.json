@@ -7,7 +7,8 @@
     "dev": "next dev",
     "ncu": "npx npm-check-updates@11.8.3 -u --dep='prod,dev'",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "toc": "npx markdown-toc@1.2.0 README.md -i"
   },
   "dependencies": {
     "@emotion/cache": "11.4.0",
