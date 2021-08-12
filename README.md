@@ -5,6 +5,61 @@ This repository was created for a small workshop covering layout grids.
 This Grid was developed by [Gregor Adams](https://github.com/pixelass). It uses the power of
 CSS-variables (a.k.a custom css properties).
 
+<!-- toc -->
+
+- [Getting Started](#getting-started)
+- [Variants](#variants)
+  * [Flex](#flex)
+  * [Grid](#grid)
+- [KISS Nesting](#kiss-nesting)
+- [Mobile First](#mobile-first)
+- [Advanced](#advanced)
+  * [On a grid](#on-a-grid)
+  * [On a row](#on-a-row)
+
+<!-- tocstop -->
+
+## Getting Started
+
+1. Clone this repository
+
+```shell
+git clone git@github.com:pixelass/next-grid-workshop.git
+```
+
+2. cd into the folder
+
+```
+cd next-grid-workshop
+```
+
+3. Install the dependencies
+
+```
+yarn install
+
+## or with npm
+npm install
+```
+
+4. Start the dev server
+
+```
+yarn run dev
+
+## or with npm
+npm run dev
+```
+
+The page for the workshop is available at http://localhost:3000/workshop. Its source can be found
+in [src/pages/workshop.tsx](src/pages/workshop.tsx).
+
+Additional documentation can be found in [docs](docs).
+
+If you have questions, just
+[open an issue](https://github.com/pixelass/next-grid-workshop/issues/new) and ask. Feel free to
+formulate it in german or english. Answers will be given in the language of the question.
+
 ## Variants
 
 There are two variants: `display: flex;`, `display: grid;`, each offering unique features.
@@ -14,9 +69,9 @@ There are two variants: `display: flex;`, `display: grid;`, each offering unique
 * Allows splitting columns
 
 ```tsx
-<Grid>
-  <Column colSpanS="calc(var(--col-count) / 2)">Always half</Column>
-</Grid>
+<FlexGrid>
+  <FlexColumn colSpanS="calc(var(--col-count) / 2)">Always half</FlexColumn>
+</FlexGrid>
 ```
 
 
